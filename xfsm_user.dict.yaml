@@ -1,0 +1,20 @@
+# Rime dictionary
+# encoding: utf-8
+# 用户词典
+
+---
+name: xfsm_user
+version: "Q1"
+sort: original
+
+...
+
+比较	bj'
+公司	gs'
+技术	js'
+速度	sd'
+虽然	sr'
+搜索	ss'
+首页	sy'
+用户	yh'
+注册	zc'

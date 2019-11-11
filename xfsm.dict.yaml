@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+# 总词典，也可仅使用下列的单个词典
+
+---
+name: xfsm
+version: "Q1"
+sort: original
+import_tables:
+  - xfsm_dz
+  - xfsm_fh
+  - xfsm_bh
+  - xfsm_cz
+  - xfsm_user
+...
