@@ -6,8 +6,8 @@
 # 方案基本信息
 schema:
   schema_id: xfsm
-  name: 西风瘦码
-  version: "2019.11.8"
+  name: 西风瘦码-$hell
+  version: "2019.11.19"
   author:
     - "$hell <yangzhaoyunfei@qq.com>"
   description: |
@@ -52,6 +52,7 @@ engine:                              # 輸入引擎設定，即掛接組件的�
     - punct_translator               # ※ 轉換標點符號
     - table_translator          # ※ 碼表翻譯器，用於倉頡、五筆等基於碼表的輸入方案，替換 script_translator。此項可加載多個實例，後接@+翻譯器名〔如：cangjie、wubi等〕
     - script_translator@pinyin_translator
+    - lua_translator@date_translator # 自定义系统变量输出
   filters:                           # 四、這批組件過濾翻譯的結果
     - simplifier
     - uniquifier
@@ -62,19 +63,14 @@ speller:
   alphabet: ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba,./;^*!?><$] # 定义本方案输入键
   #delimiter: " "                                                             # 上屛时的音节间分音符
   auto_select: true                                                          # 自动上屛〔true或false〕
-  initials: "qwertyuiopasdfghjkl;zxcvbnm"
-  finals: " "
-  algebra: 
-    #- 'xlit|_| |'
-    - "derive/^([a-z][a-z;])$/$1_/"
-#    - "derive/^([a-z][a-z])$/$1__/"
-    - "xform/_/Z/"
+  initials: "qwertyuiopasdfghjkl;zxcvbnm" # 定義僅作始碼之鍵
+  finals: " "  #定義僅作末碼之鍵
 
 # 反查分段器
 pinyin_segmentor:
   tag: pinyin   # 爲此segmentor所標記的段落插上该tag
   prefix: "`"   # 設定其前綴標識，可不塡，不塡則無前綴；此处作为反查引導鍵「`」
-  tips: "【拼音反查】"
+  tips: "[拼音反查]"
 
 # 主翻译器-瘦码
 translator:
@@ -126,4 +122,4 @@ ascii_composer:
     Caps_Lock: commit_code 
 
 menu:
-   page_size: 9
+   page_size: 15
