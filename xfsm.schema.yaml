@@ -61,10 +61,10 @@ engine:                              # 輸入引擎設定，即掛接組件的�
 # 各组件详细参数
 speller:
   alphabet: ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba,./;^*!?><$] # 定义本方案输入键
-  #delimiter: " "                                                             # 上屛时的音节间分音符
+  #delimiter: " "                                                             # 上屛时的音节间分音符，应该音码方案才使用
   auto_select: true                                                          # 自动上屛〔true或false〕
-  initials: "qwertyuiopasdfghjkl;zxcvbnm" # 定義僅作始碼之鍵
-  finals: " "  #定義僅作末碼之鍵
+  initials: "bcdfghjklmnpqrstvwxyz" # 定義僅作始碼之鍵
+  finals: ",./;"  #定義僅作末碼之鍵
 
 # 反查分段器
 pinyin_segmentor:
@@ -81,7 +81,7 @@ translator:
   enable_encoder: true
   enable_user_dict: false
   encode_commit_history: true
-  max_phrase_length: 5
+  max_phrase_length: 6
 # 副翻译器-拼音
 pinyin_translator:
   tag: pinyin # 設定此翻譯器針對的tag。
