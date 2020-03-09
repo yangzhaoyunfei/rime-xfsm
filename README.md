@@ -30,7 +30,7 @@
 
 ## 简单教程
 
-[安装使用教程](https://yangzhaoyunfei.github.io/2020/02/xfsm/)
+[安装使用教程](https://yangzhaoyunfei.github.io/2020/02/xfsm/ "安装使用教程")
 
 ## 授權條款
 見 LICENSE
